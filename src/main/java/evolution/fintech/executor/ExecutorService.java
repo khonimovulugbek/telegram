@@ -26,7 +26,7 @@ public class ExecutorService {
     }
 
     public static EditMessageText edit(GeneralSender sender) {
-        var send = EditMessageText
+        EditMessageText send = EditMessageText
                 .builder()
                 .chatId(sender.getChatId())
                 .text(sender.getText())
@@ -42,7 +42,7 @@ public class ExecutorService {
 
     public static SendPhoto sendPhoto(GeneralSender sender) {
 
-        var send = SendPhoto
+        SendPhoto send = SendPhoto
                 .builder()
                 .chatId(sender.getChatId())
                 .parseMode(sender.getParseMode() == null ? ParseMode.MARKDOWN : sender.getParseMode())
@@ -55,7 +55,7 @@ public class ExecutorService {
     }
 
     public static SendLocation sendLocation(GeneralSender sender) {
-        var send = SendLocation.builder()
+        SendLocation send = SendLocation.builder()
                 .chatId(sender.getChatId())
                 .latitude(sender.getLatitude())
                 .longitude(sender.getLongitude())
@@ -66,7 +66,7 @@ public class ExecutorService {
     }
 
     public static SendContact sendContact(GeneralSender sender) {
-        var send = SendContact
+        SendContact send = SendContact
                 .builder()
                 .chatId(sender.getChatId())
                 .firstName(sender.getFirstName())
@@ -115,7 +115,7 @@ public class ExecutorService {
     }
 
     public static SendDocument sendDocument(GeneralSender sender) {
-        var send = SendDocument
+        SendDocument send = SendDocument
                 .builder()
                 .chatId(sender.getChatId())
                 .parseMode(sender.getParseMode() == null ? ParseMode.MARKDOWN : sender.getParseMode())
