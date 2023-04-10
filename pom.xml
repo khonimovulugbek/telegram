@@ -4,14 +4,75 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.company</groupId>
+    <groupId>com.github.khonimovulugbek</groupId>
     <artifactId>telegram</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.0</source>
+                    <target>1.0</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <name>Telegram bot</name>
+    <description>A application used as an example on how to set up pushing
+        its components to the Central Repository.</description>
+    <url>http://github.com/khonimovulugbek/telegram</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <scm>
+        <connection>scm:git:git://github.com/khonimovulugbek/telegram.git</connection>
+        <developerConnection>scm:git:ssh://github.com:khonimovulugbek/telegram.git</developerConnection>
+        <url>http://github.com/khonimovulugbek/telegram</url>
+    </scm>
+
+    <developers>
+        <developer>
+            <name>Ulugbek Khonimov</name>
+            <email>khonimovulugbek@gmail.com</email>
+            <organization>com.github.khonimovulugbek</organization>
+            <organizationUrl>http://github.com/khonimovulugbek/</organizationUrl>
+        </developer>
+    </developers>
+
+
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>commons-codec</groupId>
+            <artifactId>commons-codec</artifactId>
+            <version>1.15</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.26</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.telegram</groupId>
+            <artifactId>telegrambots</artifactId>
+            <version>6.5.0</version>
+        </dependency>
+    </dependencies>
 
 </project>
