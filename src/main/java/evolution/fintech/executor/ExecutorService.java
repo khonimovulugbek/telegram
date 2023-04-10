@@ -13,7 +13,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMa
 public class ExecutorService {
 
     public static SendMessage send(GeneralSender sender) {
-        var send = SendMessage
+        SendMessage send = SendMessage
                 .builder()
                 .chatId(sender.getChatId())
                 .text(sender.getText())
